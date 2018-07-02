@@ -39,6 +39,16 @@ class AppPage {
     });
   }
 
+  callParseTokens() {
+    browser.wait(EC.presenceOf(this.pageEl));
+    browser.executeScript('parseTokens()');
+  }
+
+  callParseTokensWithDefaultHandlers() {
+    browser.wait(EC.presenceOf(this.pageEl));
+    browser.executeScript('parseTokensWithDefaultHandlers()');
+  }
+
 }
 
 module.exports = AppPage;
